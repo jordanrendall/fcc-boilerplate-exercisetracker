@@ -15,9 +15,10 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use(express.static("public"));
+app.use(express.static("dist"));
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/views/index.html");
+  console.log(__dirname);
+  res.sendFile(__dirname + "/dist/views/index.html");
 });
 
 // Not found middleware
