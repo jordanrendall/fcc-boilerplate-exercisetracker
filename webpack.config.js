@@ -27,7 +27,7 @@ module.exports = {
       },
       {
         //Sass & css
-        test: /\.scss$/,
+        test: /\.(css|scss)$/,
         //Applied from last to first
         use: [
           "style-loader",
