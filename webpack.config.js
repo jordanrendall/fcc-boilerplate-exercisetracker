@@ -15,14 +15,14 @@ const htmlPlugin = new HtmlWebPackPlugin({
 
 //Setup of css plugin
 const miniCssPlugin = new MiniCssWebpackPlugin({
-  filename: "./assets/css/style.[contenthash].css"
+  filename: "./css/style.[contenthash].css"
 });
 
 module.exports = {
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "public"),
-    filename: "[name].[chunkhash].js"
+    path: path.resolve(__dirname, "build"),
+    filename: "./js/[name].[chunkhash].js"
   },
   module: {
     rules: [
