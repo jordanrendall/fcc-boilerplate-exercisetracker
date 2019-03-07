@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 app.use(express.static("build"));
 app.get("/", (req, res) => {
   console.log(__dirname);
-  res.sendFile(__dirname + "/dist/views/index.html");
+  res.sendFile(__dirname + "/build/views/index.html");
 });
 
 // Not found middleware
