@@ -2,6 +2,10 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 //Allows for extraction of (s)css files for use in the final page
 const MiniCssWebpackPlugin = require("mini-css-extract-plugin");
+//Allows for consistent hashing files on output
+const WebpackMd5Hash = require("webpack-md5-hash");
+//Allows for path references
+const path = require("path");
 
 //Setup of html plugin
 const htmlPlugin = new HtmlWebPackPlugin({
@@ -11,12 +15,15 @@ const htmlPlugin = new HtmlWebPackPlugin({
 
 //Setup of css plugin
 const miniCssPlugin = new MiniCssWebpackPlugin({
-  filename: "style.css",
-  chunkFilename: "[id].css"
+  filename: "./assets/css/style.[contenthash].css"
 });
 
 module.exports = {
   entry: "./src/index.js",
+  output: {
+    path: path.resolve(__dirname, "public"),
+    filename: "[name].[chunkhash].js"
+  },
   module: {
     rules: [
       {
@@ -38,5 +45,5 @@ module.exports = {
       }
     ]
   },
-  plugins: [htmlPlugin, miniCssPlugin]
+  plugins: [htmlPlugin, miniCssPlugin, new WebpackMd5Hash()]
 };
