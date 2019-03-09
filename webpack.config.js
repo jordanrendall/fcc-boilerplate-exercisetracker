@@ -29,6 +29,7 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     filename: './js/[name].[chunkhash].js'
   },
+  watch: true,
   module: {
     rules: [
       {
