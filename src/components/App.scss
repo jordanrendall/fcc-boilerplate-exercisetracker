@@ -1,39 +1,17 @@
-html, body {
+html, body, #root {
     min-height: 100vh;
     background: skyblue;
 }
 
-#app-container {
+#root {
     display: grid;
+    justify-content: center;
+    align-items: center;
     grid-template-areas: "header header header"   "sidebar content content"   "footer footer footer";
 }
 
-header {
-    grid-area: header;
-    grid-column: 1/-1;
-    justify-content: center;
-    align-items: center;
-    background: cadetblue;
-}
-
-main {
-    grid-area: content;
-    grid-column: 1/-1;
-    justify-content: center;
-    align-items: center;
-    background: sandybrown;
-}
-
-.sidebar {
-    grid-area: sidebar;
-    justify-content: center;
-    align-items: center;
-    background: paleturquoise;
-}
-
-footer {
-    grid-area: footer;
-    justify-content: center;
-    align-items: center;
-    background: black;
+#app-container {
+    background: red;
+    border-radius: 20px;
+    align-content: center;
 }
