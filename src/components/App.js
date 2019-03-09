@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
-import './Forms.js';
-import './SubmissionCounter.js';
+import Forms from './Forms.js';
+import SubmissionCounter from './SubmissionCounter.js';
 
 class App extends React.Component {
   render() {
