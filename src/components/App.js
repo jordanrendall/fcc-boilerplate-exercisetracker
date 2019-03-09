@@ -1,14 +1,17 @@
 import React from 'react';
 import './App.scss';
-import Forms from './Forms.js';
-import SubmissionCounter from './SubmissionCounter.js';
+import Main from './Main.js';
+import Sidebar from './Sidebar.js';
+import Footer from './Footer.js';
 
 class App extends React.Component {
   render() {
     return (
       <div id="app-container">
-        <Forms />
-        <SubmissionCounter />
+        <Header />
+        <Main />
+        <Sidebar />
+        <Footer />
       </div>
     );
   }
