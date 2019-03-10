@@ -1,5 +1,5 @@
 import React from 'react';
-import './SubmissionCounter.scss';
+import './App.scss';
 
 class SubmissionCounter extends React.Component {
   render() {

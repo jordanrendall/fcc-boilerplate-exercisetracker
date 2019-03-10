@@ -1,5 +1,5 @@
 import React from 'react';
-import './Sidebar.scss';
+import './App.scss';
 import SubmissionCounter from './SubmissionCounter.js';
 
 class Sidebar extends React.Component {

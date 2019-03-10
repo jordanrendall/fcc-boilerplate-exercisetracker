@@ -1,5 +1,5 @@
 import React from 'react';
-import './Main.scss';
+import './App.scss';
 import Forms from './Forms.js';
 
 class Main extends React.Component {

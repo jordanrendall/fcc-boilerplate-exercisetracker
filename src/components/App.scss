@@ -3,15 +3,67 @@ html, body, #root {
     background: skyblue;
 }
 
+$padding: 10px;
+
 #root {
     display: grid;
     justify-content: center;
+    align-content: center;
     align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: "header header header"   "sidebar content content"   "footer footer footer";
+    padding: $padding;
+    margin: 10px auto;
 }
 
 #app-container {
-    background: red;
+    background: palegoldenrod;
     border-radius: 20px;
+    justify-self: center;
     align-content: center;
+    grid-column: 1/-1;
+    width: 100%;
+    height: 100vh;
+    grid-row: 1/-1;
+}
+
+header {
+    grid-area: header;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    justify-content: center;
+    align-items: center;
+    background: cadetblue;
+}
+
+main {
+    grid-area: content;
+    grid-column: span 2/4;
+    grid-row: span 2/3;
+    justify-content: center;
+    align-items: center;
+    background: sandybrown;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    justify-content: center;
+    align-items: center;
+    background: paleturquoise;
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+footer {
+    grid-area: footer;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    grid-column: span 3;
+    grid-row: span 1/4;
+}
+
+#submit-form {
+    height: 10rem;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import './SubmitForm.scss';
+import './App.scss';
 
 class SubmitForm extends React.Component {
   render() {
