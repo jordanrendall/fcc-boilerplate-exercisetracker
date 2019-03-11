@@ -1,67 +1,84 @@
+:root {
+    --margin: 0px;
+    --padding: 20px;
+    --upper-border-round: 10px 10px 0 0;
+    --lower-border-round: 0 0 10px 10px;
+}
+
 html, body, #root {
     min-height: 100vh;
     background: skyblue;
+    margin: var(--margin);
+    font-size: 20px;
 }
-
-$padding: 10px;
 
 #root {
     display: grid;
-    justify-content: center;
-    align-content: center;
     align-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "header header header"   "sidebar content content"   "footer footer footer";
-    padding: $padding;
-    margin: 10px auto;
+    justify-items: center;
+    padding: var(--padding);
+    border-radius: 40px;
+    height: 60vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
 }
 
 #app-container {
     background: palegoldenrod;
-    border-radius: 20px;
-    justify-self: center;
-    align-content: center;
-    grid-column: 1/-1;
-    width: 100%;
-    height: 100vh;
-    grid-row: 1/-1;
+    border-radius: 40px;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 60vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50px 1fr 50px;
 }
 
 header {
-    grid-area: header;
     grid-column: 1/-1;
     grid-row: 1/2;
+    height: 100%;
     justify-content: center;
     align-items: center;
     background: cadetblue;
+    border-radius: var(--upper-border-round);
+}
+
+header > h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
 }
 
 main {
-    grid-area: content;
-    grid-column: span 2/4;
-    grid-row: span 2/3;
+    grid-column: 2/4;
+    grid-row: 2/3;
     justify-content: center;
     align-items: center;
     background: sandybrown;
 }
 
 .sidebar {
-    grid-area: sidebar;
     justify-content: center;
     align-items: center;
-    background: paleturquoise;
-    grid-column: span 1;
-    grid-row: span 2;
+    background: green;
+    grid-column: 1/2;
+    grid-row: 2/3;
 }
 
 footer {
-    grid-area: footer;
+    display: flex;
     justify-content: center;
     align-items: center;
     background: black;
-    grid-column: span 3;
-    grid-row: span 1/4;
+    grid-column: 1/-1;
+    height: 50px;
+    border-radius: var(--lower-border-round);
+    grid-row: -2/-1;
+    color: white;
+    font-size: 1em;
 }
 
 #submit-form {
